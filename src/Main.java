@@ -1,7 +1,11 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import java.util.Scanner;
+import java.nio.file.Paths;
+
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
 
@@ -11,7 +15,8 @@ public class Main {
         int verb_counter = 0;
         int adverb_counter = 0;
 
-        String contents = "Ржавый Печь Добросердечный Возвращение родину Товарный вагон Поздно бежать синий порча";
+        String readingFile = "./info";
+        String contents = readUsingScanner(readingFile);
 
         System.out.println("Text from file: " + contents);
 
@@ -50,4 +55,19 @@ public class Main {
         System.out.println("Verb Counter: " + verb_counter);
         System.out.println("Adverb Counter: " + adverb_counter);
     }
+
+    private static String readUsingScanner(String readingFile) throws IOException {
+        Scanner scanner = new Scanner(Paths.get(readingFile), StandardCharsets.UTF_8.name());
+        String data = scanner.useDelimiter("\\A").next();
+        scanner.close();
+        return data;
+    }
+
 }
+
+
+
+
+
+
+
