@@ -1,5 +1,7 @@
 language: java
 
+os: windows
+
 sudo: false
 
 install: true
@@ -12,6 +14,6 @@ jdk:
 notifications:
   email:
     recipients:
-      -uncledeni@mail.ru
+      uncledeni@mail.ru
     on_success: never
     on_failure: always
