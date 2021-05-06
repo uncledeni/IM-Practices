@@ -7,10 +7,9 @@ install: true
 jdk:
   - oraclejdk8
   - oraclejdk9
-  - jdk8
-  - jdk9
+  - openjdk8
 
-script: ant build
+script: ./Test_readUsingScanner
 
 notifications:
   email:
