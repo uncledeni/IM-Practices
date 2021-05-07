@@ -9,8 +9,6 @@ jdk:
   - oraclejdk9
   - openjdk8
 
-script: ./Test_readUsingScanner
-
 notifications:
   email:
     recipients:
