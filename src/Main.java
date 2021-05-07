@@ -62,4 +62,5 @@ public class Main {
         scanner.close();
         return data;
     }
+
 }
