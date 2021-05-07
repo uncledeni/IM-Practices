@@ -56,17 +56,10 @@ public class Main {
         System.out.println("Adverb Counter: " + adverb_counter);
     }
 
-    private static String readUsingScanner(String readingFile) throws IOException {
+    public static String readUsingScanner(String readingFile) throws IOException {
         Scanner scanner = new Scanner(Paths.get(readingFile), StandardCharsets.UTF_8.name());
         String data = scanner.useDelimiter("\\A").next();
         scanner.close();
         return data;
     }
 }
-
-
-
-
-
-
-
