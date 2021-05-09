@@ -1,4 +1,4 @@
 language: java
 jdk :
-- openjdk10
+- openjdk15
 dist: bionic
